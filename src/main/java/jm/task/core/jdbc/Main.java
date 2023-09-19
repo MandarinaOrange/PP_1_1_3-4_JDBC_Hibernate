@@ -31,6 +31,7 @@ public class Main {
         userDaoJDBC.saveUser("CC", "cc", (byte) 22);
         users = userDaoJDBC.getAllUsers();
         System.out.println(users);
+        new Util();
 
     }
 }

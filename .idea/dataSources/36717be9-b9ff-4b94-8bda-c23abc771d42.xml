@@ -5,9 +5,7 @@
       <DefaultCasing>lower/lower</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
       <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
-      <Grants>|root||Mandarin||ALTER|G
-|root||root|localhost|ALTER|G
-|root||Mandarin||ALTER ROUTINE|G
+      <Grants>|root||root|localhost|ALTER|G
 |root||root|localhost|ALTER ROUTINE|G
 |root||root|localhost|APPLICATION_PASSWORD_ADMIN|G
 |root||mysql.infoschema|localhost|AUDIT_ABORT_EXEMPT|G
@@ -25,30 +23,19 @@
 |root||root|localhost|CLONE_ADMIN|G
 |root||mysql.session|localhost|CONNECTION_ADMIN|G
 |root||root|localhost|CONNECTION_ADMIN|G
-|root||Mandarin||CREATE|G
 |root||root|localhost|CREATE|G
 |root||root|localhost|CREATE ROLE|G
-|root||Mandarin||CREATE ROUTINE|G
 |root||root|localhost|CREATE ROUTINE|G
-|root||Mandarin||CREATE TABLESPACE|G
 |root||root|localhost|CREATE TABLESPACE|G
-|root||Mandarin||CREATE TEMPORARY TABLES|G
 |root||root|localhost|CREATE TEMPORARY TABLES|G
-|root||Mandarin||CREATE USER|G
 |root||root|localhost|CREATE USER|G
-|root||Mandarin||CREATE VIEW|G
 |root||root|localhost|CREATE VIEW|G
-|root||Mandarin||DELETE|G
 |root||root|localhost|DELETE|G
-|root||Mandarin||DROP|G
 |root||root|localhost|DROP|G
 |root||root|localhost|DROP ROLE|G
 |root||root|localhost|ENCRYPTION_KEY_ADMIN|G
-|root||Mandarin||EVENT|G
 |root||root|localhost|EVENT|G
-|root||Mandarin||EXECUTE|G
 |root||root|localhost|EXECUTE|G
-|root||Mandarin||FILE|G
 |root||root|localhost|FILE|G
 |root||mysql.infoschema|localhost|FIREWALL_EXEMPT|G
 |root||mysql.session|localhost|FIREWALL_EXEMPT|G
@@ -60,33 +47,24 @@
 |root||root|localhost|FLUSH_USER_RESOURCES|G
 |root||root|localhost|GROUP_REPLICATION_ADMIN|G
 |root||root|localhost|GROUP_REPLICATION_STREAM|G
-|root||Mandarin||INDEX|G
 |root||root|localhost|INDEX|G
 |root||root|localhost|INNODB_REDO_LOG_ARCHIVE|G
 |root||root|localhost|INNODB_REDO_LOG_ENABLE|G
-|root||Mandarin||INSERT|G
 |root||root|localhost|INSERT|G
-|root||Mandarin||LOCK TABLES|G
 |root||root|localhost|LOCK TABLES|G
 |root||root|localhost|PASSWORDLESS_USER_ADMIN|G
 |root||mysql.session|localhost|PERSIST_RO_VARIABLES_ADMIN|G
 |root||root|localhost|PERSIST_RO_VARIABLES_ADMIN|G
-|root||Mandarin||PROCESS|G
 |root||root|localhost|PROCESS|G
-|root||Mandarin||REFERENCES|G
 |root||root|localhost|REFERENCES|G
-|root||Mandarin||RELOAD|G
 |root||root|localhost|RELOAD|G
-|root||Mandarin||REPLICATION CLIENT|G
 |root||root|localhost|REPLICATION CLIENT|G
-|root||Mandarin||REPLICATION SLAVE|G
 |root||root|localhost|REPLICATION SLAVE|G
 |root||root|localhost|REPLICATION_APPLIER|G
 |root||root|localhost|REPLICATION_SLAVE_ADMIN|G
 |root||root|localhost|RESOURCE_GROUP_ADMIN|G
 |root||root|localhost|RESOURCE_GROUP_USER|G
 |root||root|localhost|ROLE_ADMIN|G
-|root||Mandarin||SELECT|G
 |root||mysql.infoschema|localhost|SELECT|G
 |root||root|localhost|SELECT|G
 |root||root|localhost|SENSITIVE_VARIABLES_OBSERVER|G
@@ -94,15 +72,11 @@
 |root||mysql.session|localhost|SESSION_VARIABLES_ADMIN|G
 |root||root|localhost|SESSION_VARIABLES_ADMIN|G
 |root||root|localhost|SET_USER_ID|G
-|root||Mandarin||SHOW DATABASES|G
 |root||root|localhost|SHOW DATABASES|G
-|root||Mandarin||SHOW VIEW|G
 |root||root|localhost|SHOW VIEW|G
 |root||root|localhost|SHOW_ROUTINE|G
-|root||Mandarin||SHUTDOWN|G
 |root||mysql.session|localhost|SHUTDOWN|G
 |root||root|localhost|SHUTDOWN|G
-|root||Mandarin||SUPER|G
 |root||mysql.session|localhost|SUPER|G
 |root||root|localhost|SUPER|G
 |root||mysql.infoschema|localhost|SYSTEM_USER|G
@@ -113,16 +87,13 @@
 |root||root|localhost|SYSTEM_VARIABLES_ADMIN|G
 |root||root|localhost|TABLE_ENCRYPTION_ADMIN|G
 |root||root|localhost|TELEMETRY_LOG_ADMIN|G
-|root||Mandarin||TRIGGER|G
 |root||root|localhost|TRIGGER|G
-|root||Mandarin||UPDATE|G
 |root||root|localhost|UPDATE|G
 |root||root|localhost|XA_RECOVER_ADMIN|G
-|root||Mandarin||grant option|G
 |root||root|localhost|grant option|G
 performance_schema|schema||mysql.session|localhost|SELECT|G
 sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
-      <ServerVersion>8.0.33</ServerVersion>
+      <ServerVersion>8.0.34</ServerVersion>
     </root>
     <collation id="2" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
@@ -1026,115 +997,39 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="288" parent="1" name="information_schema">
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
-    <schema id="289" parent="1" name="mydbtest">
-      <CollationName>utf8mb3_general_ci</CollationName>
-    </schema>
-    <schema id="290" parent="1" name="mysql">
+    <schema id="289" parent="1" name="mysql">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="291" parent="1" name="performance_schema">
+    <schema id="290" parent="1" name="performance_schema">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="291" parent="1" name="spring_hiber">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="292" parent="1" name="sys">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="293" parent="1" name="test">
+    <schema id="293" parent="1" name="test1">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="294" parent="1" name="users">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <user id="295" parent="1" name="Mandarin">
-      <Plugin>caching_sha2_password</Plugin>
-    </user>
-    <user id="296" parent="1" name="mysql.infoschema">
+    <user id="294" parent="1" name="mysql.infoschema">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="297" parent="1" name="mysql.session">
+    <user id="295" parent="1" name="mysql.session">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="298" parent="1" name="mysql.sys">
+    <user id="296" parent="1" name="mysql.sys">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="299" parent="1" name="root">
+    <user id="297" parent="1" name="root">
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="300" parent="289" name="animal">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb3_general_ci</CollationName>
-    </table>
-    <table id="301" parent="289" name="users">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb3_general_ci</CollationName>
-    </table>
-    <column id="302" parent="300" name="id">
-      <AutoIncrement>6</AutoIncrement>
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="303" parent="300" name="anim_name">
-      <DasType>varchar(45)|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <column id="304" parent="300" name="anim_desc">
-      <DasType>varchar(225)|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <index id="305" parent="300" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="306" parent="300" name="id_UNIQUE">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="307" parent="300" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <key id="308" parent="300" name="id_UNIQUE">
-      <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
-    </key>
-    <column id="309" parent="301" name="id">
-      <AutoIncrement>12</AutoIncrement>
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="310" parent="301" name="name">
-      <DasType>varchar(45)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="311" parent="301" name="age">
-      <DasType>int|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <column id="312" parent="301" name="surname">
-      <DasType>varchar(64)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <index id="313" parent="301" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="314" parent="301" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
   </database-model>
 </dataSource>
