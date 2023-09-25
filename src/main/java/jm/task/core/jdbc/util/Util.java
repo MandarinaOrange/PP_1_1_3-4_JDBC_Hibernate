@@ -9,17 +9,15 @@ import java.sql.*;
 
 public class Util {
     // реализуйте настройку соеденения с БД
-    private final static String URL =
-            "jdbc:mysql://localhost:3306/test1" ;
-                    //+ "INIT = RUNSCRIPT FROM 'classpath: init.sql'";
-    private final static String USERNAME = "root";
-    private final static String PASSWORD = "root";
+    private static final String URL = "jdbc:mysql://localhost:3306/test1" ;
+
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "root";
 
     private static SessionFactory sessionFactory;
 
     public Util() {
-        try /*(Connection connection1 = DriverManager.getConnection(URL, USERNAME, PASSWORD));*/{
-             //Statement statement = connection1.createStatement()){
+        try {
         Connection connection1 = DriverManager.getConnection(URL, USERNAME, PASSWORD);
             if (!connection1.isClosed()) {
                 System.out.println("Connected");
@@ -35,7 +33,7 @@ public class Util {
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
 
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return connection;
     }
@@ -47,9 +45,9 @@ public class Util {
                 Configuration configuration = new Configuration();
 
                 configuration.setProperty("hibernate.connection.driver_class","com.mysql.jdbc.Driver");
-                configuration.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/test1");
-                configuration.setProperty("hibernate.connection.username", "root");
-                configuration.setProperty("hibernate.connection.password", "root");
+                configuration.setProperty("hibernate.connection.url", URL);
+                configuration.setProperty("hibernate.connection.username", USERNAME);
+                configuration.setProperty("hibernate.connection.password", PASSWORD);
                 configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
                 configuration.setProperty("hibernate.hbm2ddl.auto", "update");
                 configuration.setProperty("hibernate.show_sql", "true");

@@ -2,13 +2,11 @@ package jm.task.core.jdbc.dao;
 
 import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.util.Util;
-import org.hibernate.Cache;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-import javax.persistence.PersistenceException;
-import javax.transaction.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,7 +62,7 @@ public class UserDaoHibernateImpl implements UserDao {
     public void removeUserById(long id) {
         try (Session session = sessionFactory.openSession()){
             Transaction tx = session.beginTransaction();
-            User user = (User) session.get(User.class, id);
+            User user = session.get(User.class, id);
             if (user != null) {
                 session.delete(user);
             }
@@ -82,6 +80,7 @@ public class UserDaoHibernateImpl implements UserDao {
             for (User user : result) {
                 System.out.println("User: " + user.toString());
             }
+            tx.commit();
             return result;
         } catch (Exception e) {
             e.printStackTrace();
