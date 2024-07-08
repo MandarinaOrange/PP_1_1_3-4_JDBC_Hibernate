@@ -10,14 +10,16 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.System.*;
+
 public class UserDaoJDBCImpl implements UserDao {
     public UserDaoJDBCImpl() {
 
     }
 
     public void createUsersTable() {
-        String query = "CREATE SCHEMA if NOT EXISTS test1;";
-        String query1 = "USE test1;";
+        String query = "CREATE SCHEMA if NOT EXISTS test;";
+        String query1 = "USE test;";
         String query2 = "DROP TABLE if EXISTS users " ;
         String query3 = "CREATE TABLE users(id integer not null primary key auto_increment, name varchar(40), lastName varchar(40), age smallint)";
         try (Connection connection = Util.getConnection();
@@ -61,6 +63,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
         ) {
             preparedStatement.executeUpdate();
+            System.out.println("User с именем — " + name + " добавлен в базу данных");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

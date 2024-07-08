@@ -10,7 +10,7 @@ import java.sql.*;
 public class Util {
     // реализуйте настройку соеденения с БД
     private final static String URL =
-            "jdbc:mysql://localhost:3306/test1" ;
+            "jdbc:mysql://localhost:3306/test" ;
                     //+ "INIT = RUNSCRIPT FROM 'classpath: init.sql'";
     private final static String USERNAME = "root";
     private final static String PASSWORD = "root";
